@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+    <title>Pizza Order Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pizza Order Form</h1>
+        <form id="pizzaForm">
+            <h2>Customer Information</h2>
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerEmail">Email:</label>
+            <input type="email" id="customerEmail" name="customerEmail" required>
+
+            <label for="customerPhone">Phone:</label>
+            <input type="tel" id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Format: 123-456-7890" required>
+
+            <h2>Pizza Details</h2>
+            <label for="size">Size:</label>
+            <select id="size" name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="crust">Crust:</label>
+            <select id="crust" name="crust">
+                <option value="thin">Thin Crust</option>
+                <option value="thick">Thick Crust</option>
+            </select>
+
+            <label for="topping">Topping:</label>
+            <div class="checkbox-group">
+                <span class="checkbox-label"><input type="checkbox" name="topping" value="pepperoni"> Pepperoni</span>
+                <span class="checkbox-label"><input type="checkbox" name="topping" value="mushrooms"> Mushrooms</span>
+                <span class="checkbox-label"><input type="checkbox" name="topping" value="onions"> Onions</span>
+                <span class="checkbox-label"><input type="checkbox" name="topping" value="sausage"> Sausage</span>
+                <span class="checkbox-label"><input type="checkbox" name="topping" value="olives"> Olives</span>
+            </div>
+
+            <button type="button" onclick="placeOrder()">Order</button>
+        </form>
+
+        <div id="orderSummary">
+            <!-- Order summary will be displayed here -->
+        </div>
+
+        <p id="studentInfo"></p>
+    </div>
+</body>
+
+</html>
